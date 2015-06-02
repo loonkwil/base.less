@@ -169,5 +169,5 @@ gulp.task('minify', function() {
 // Task for releasing
 // Usage: `gulp release [--version <version>|-r <version>]`
 gulp.task('release', function(cb) {
-    return runSequence('dist', 'bump');
+    return runSequence('dist', 'bump', cb);
 });
