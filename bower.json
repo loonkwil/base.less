@@ -1,0 +1,21 @@
+{
+  "name": "base.less",
+  "version": "0.0.0",
+  "authors": [
+    "Peter Simon <simonpepe@gmail.com>"
+  ],
+  "license": "MIT",
+  "description": "Simple front-end framework for developing responsive, mobile first web pages",
+  "ignore": [
+    "bower_components",
+    "src",
+    "node_modules",
+    "**/.*",
+    "gulpconfig.js",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "normalize-css": "^3.0.0"
+  }
+}
