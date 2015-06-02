@@ -6,6 +6,10 @@
   ],
   "license": "MIT",
   "description": "Simple front-end framework for developing responsive, mobile first web pages",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:loonkwil/base.less.git"
+  },
   "scripts": {
     "test": "gulp test"
   },

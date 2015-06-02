@@ -2,6 +2,12 @@
 
 Simple front-end framework for developing responsive, mobile first web pages.
 
+## Install
+
+```bash
+bower install git@github.com:loonkwil/base.less.git --save
+```
+
 ## Usage
 
 ```html
@@ -10,7 +16,7 @@ Simple front-end framework for developing responsive, mobile first web pages.
   <meta charset=utf-8>
   <title></title>
   <link rel=stylesheet href=bower_components/normalize-css/normalize.css>
-  <link rel=stylesheet href=bower_components/base.css/dist/base.css>
+  <link rel=stylesheet href=bower_components/base.less/dist/base.css>
 
   <h1>Hello</h1>
 </html>
