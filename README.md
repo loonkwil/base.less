@@ -2,6 +2,11 @@
 
 Simple front-end framework for developing responsive, mobile first web pages.
 
+Inspired by
+[Solved by Flexbox](http://philipwalton.github.io/solved-by-flexbox/demos/grids),
+[Bootstrap](http://getbootstrap.com),
+[Skeleton](http://getskeleton.com)
+
 ## Install
 
 ```bash
