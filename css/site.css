@@ -1,0 +1,12 @@
+.show-grid {
+  margin-bottom: 1em;
+}
+.show-grid .show-grid {
+  margin-bottom: 0;
+}
+
+.show-grid .col {
+  background-color: rgba(170, 170, 170, .2);
+  border: 1px solid #b6b6b6;
+  padding: 1em;
+}

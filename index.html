@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang=en>
+  <meta charset=utf-8>
+  <title>base.less</title>
+  <link rel=stylesheet href=bower_components/normalize-css/normalize.css>
+  <link rel=stylesheet href=bower_components/base.less/dist/base.css>
+  <link rel=stylesheet href=css/site.css>
+
+  <div class="container">
+    <h1>Grid system</h1>
+
+    <h2>Basic Grids</h2>
+    <p>Grids without specifying a width or a height.</p>
+
+    <div class="row show-grid">
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+    </div>
+    <div class="row show-grid">
+      <div class="col">.col</div>
+      <div class="col">
+        <div class="row show-grid">
+          <div class="col">.col</div>
+          <div class="col">.col</div>
+          <div class="col">.col</div>
+        </div>
+      </div>
+      <div class="col">.col</div>
+    </div>
+    <div class="row show-grid">
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam
+        lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam
+        viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent
+        et diam eget libero egestas mattis sit amet vitae augue.
+      </div>
+      <div class="col">
+        In a row, all column has the same height.
+      </div>
+    </div>
+
+    <p>Grid with gutters (gaps between column content).</p>
+    <div class="row row--gutters show-grid">
+      <div class="col">.col</div>
+      <div class="col">
+        <div class="row row--gutters show-grid">
+          <div class="col">.col</div>
+          <div class="col">.col</div>
+        </div>
+      </div>
+      <div class="col">.col</div>
+    </div>
+
+    <h2>Individual Sizing</h2>
+    <div class="row show-grid">
+      <div class="col col--1of2">.col .col--1of2</div>
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+    </div>
+    <div class="row show-grid">
+      <div class="col">.col</div>
+      <div class="col col--1of3">.col .col--1of3</div>
+    </div>
+    <div class="row show-grid">
+      <div class="col col--1of4">.col .col--1of4</div>
+      <div class="col">.col</div>
+      <div class="col col--1of3">.col .col--1of3</div>
+    </div>
+
+    <h2>Responsive Grids</h2>
+    <div class="row row--full sm-row--fit show-grid">
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+    </div>
+    <div class="row row--full show-grid">
+      <div class="col sm-col--1of3 md-col--fit">.col .sm-col--1of3 .md-col--fit</div>
+      <div class="col sm-col--2of3 md-col--fit">.col .sm-col--2of3 .md-col--fit</div>
+      <div class="col sm-col--2of3 md-col--fit">.col .sm-col--2of3 .md-col--fit</div>
+      <div class="col sm-col--1of3 md-col--fit">.col .sm-col--1of3 .md-col--fit</div>
+    </div>
+  </div>
+</html>

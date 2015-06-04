@@ -1,0 +1,11 @@
+{
+  "name": "gh-pages",
+  "authors": [
+    "Peter Simon <simonpepe@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize-css": "^3.0.0",
+    "base.less": "git@github.com:loonkwil/base.less.git"
+  }
+}
