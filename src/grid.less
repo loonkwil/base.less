@@ -8,13 +8,11 @@
 }
 
 // With gutters
-.row--gutters {
-  margin-right: (@grid-gutter-size / -2);
-  margin-left: (@grid-gutter-size / -2);
+.row--gutters .col {
+  margin-right: @grid-gutter-size;
 
-  & > .col {
-    margin-right: (@grid-gutter-size / 2);
-    margin-left: (@grid-gutter-size / 2);
+  &:last-child {
+    margin-right: 0;
   }
 }
 
