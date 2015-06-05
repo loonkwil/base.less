@@ -37,13 +37,11 @@
       -ms-flex: 1;
           flex: 1;
 }
-.row--gutters {
-  margin-right: -0.5em;
-  margin-left: -0.5em;
+.row--gutters .col {
+  margin-right: 1em;
 }
-.row--gutters > .col {
-  margin-right: 0.5em;
-  margin-left: 0.5em;
+.row--gutters .col:last-child {
+  margin-right: 0;
 }
 .row--fit > .col {
   -webkit-box-flex: 1;
