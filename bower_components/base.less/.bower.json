@@ -1,6 +1,6 @@
 {
   "name": "base.less",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
     "Peter Simon <simonpepe@gmail.com>"
   ],
@@ -19,11 +19,11 @@
     "normalize-css": "^3.0.0"
   },
   "homepage": "https://github.com/loonkwil/base.less",
-  "_release": "0.1.0",
+  "_release": "0.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.1.0",
-    "commit": "8e22ea880f92ee6c2b08375da9431213cc77c478"
+    "tag": "v0.2.0",
+    "commit": "8b1fd6ba9ebc9d8097517516a4b510a02e20d6bc"
   },
   "_source": "git@github.com:loonkwil/base.less.git",
   "_target": "*",

@@ -10,7 +10,11 @@
     <h1>Grid system</h1>
 
     <h2>Basic Grids</h2>
-    <p>Grids without specifying a width or a height.</p>
+    <p>The grid cells below do not specify any widths, they just naturally
+    space themselves equally and expand to fit the entire row. They’re also
+    equal height by default.</p>
+    <p>Grid components are infinitely nestable inside of other grid
+    components.</p>
 
     <div class="row show-grid">
       <div class="col">.col</div>
@@ -37,7 +41,7 @@
         et diam eget libero egestas mattis sit amet vitae augue.
       </div>
       <div class="col">
-        In a row, all column has the same height.
+        Full-height, even when my content doesn't fill the space.
       </div>
     </div>
 
@@ -54,6 +58,9 @@
     </div>
 
     <h2>Individual Sizing</h2>
+    <p>When equal widths aren’t what you want, you can add sizing classes to
+    individual cells. Cells without sizing classes simply divide up the
+    remaining space as normal.</p>
     <div class="row show-grid">
       <div class="col col--1of2">.col .col--1of2</div>
       <div class="col">.col</div>
@@ -70,6 +77,7 @@
     </div>
 
     <h2>Responsive Grids</h2>
+    <p>Resize your browser to see them in action.</p>
     <div class="row row--full sm-row--fit show-grid">
       <div class="col">.col</div>
       <div class="col">.col</div>
@@ -80,5 +88,180 @@
       <div class="col sm-col--2of3 md-col--fit">.col .sm-col--2of3 .md-col--fit</div>
       <div class="col sm-col--1of3 md-col--fit">.col .sm-col--1of3 .md-col--fit</div>
     </div>
+
+    <h1>Typography</h1>
+    <div class="row row--full row--gutters sm-row--fit">
+      <div class="col">
+        <p>The base type is 15px over 1.6 line height (24px)</p>
+        <p class="u-text-left">Left align text</p>
+        <p class="u-text-center">Center align text</p>
+        <p class="u-text-right">Right align text</p>
+
+        <strong>Bold</strong><br>
+        <em>Italic</em><br>
+        <u>Underline</u><br>
+        <a href="#">Link</a>
+      </div>
+      <div class="col">
+        <h1>h1 heading</h1>
+        <h2>h2 heading</h2>
+        <h3>h3 heading</h3>
+        <h4>h4 heading</h4>
+        <h5>h5 heading</h5>
+        <h6>h6 heading</h6>
+      </div>
+    </div>
+
+    <h1>Buttons</h1>
+    <div>
+      <a class="btn" href="#">Anchor button</a>
+      <button>Button element</button>
+      <input type="submit" value="submit input">
+      <input type="button" value="button input">
+    </div>
+
+    <div>
+      <a class="btn btn--primary" href="#">Anchor button</a>
+      <button class="btn--primary">Button element</button>
+      <input class="btn--primary" type="submit" value="submit input">
+      <input class="btn--primary" type="button" value="button input">
+    </div>
+
+    <h1>Forms</h1>
+    <form>
+      <div class="row row--gutters row--full sm-row--fit">
+        <div class="col">
+          <label for="first-name-input">First name</label>
+          <input type="text" id="first-name-input" class="u-full-width">
+        </div>
+
+        <div class="col">
+          <label for="last-name-input">Last name</label>
+          <input type="text" id="last-name-input" class="u-full-width">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="email-input">Email</label>
+          <input type="email" placeholder="info@example.org" id="email-input" class="u-full-width">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="month-input">Birthday</label>
+          <select id="month-input">
+            <option selected value="">Month</option>
+          </select>
+          <select id="day-input">
+            <option selected value="">Day</option>
+          </select>
+          <select id="year-input">
+            <option selected value="">Year</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label>
+            <input type="radio" name="sex" value="">
+            <span class="label-body">Female</span>
+          </label>
+        </div>
+        <div class="col">
+          <label>
+            <input type="radio" name="sex" value="">
+            <span class="label-body">Male</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="controls">
+        <input class="btn--primary" type="submit" value="Submit">
+      </div>
+    </form>
+
+    <h1>Lists</h1>
+    <div class="row row--full sm-row--fit">
+      <div class="col">
+        <ul>
+          <li>Unordered lists have basic styles</li>
+          <li>
+            They use the circle list style
+            <ul>
+              <li>Nested lists styled to feel right</li>
+              <li>Can nest either type of list into the other</li>
+            </ul>
+          </li>
+          <li>Last item</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ol>
+          <li>Ordered lists also have basic styles</li>
+          <li>
+            They use the decimal list style
+            <ul>
+              <li>Ordered and unordered can be nested</li>
+              <li>Can nest either type of list into the other</li>
+            </ul>
+          </li>
+          <li>Last item</li>
+        </ol>
+      </div>
+    </div>
+
+    <h1>Code</h1>
+    <pre><code>.some-class {
+  background-color: red;
+}</code></pre>
+
+    <h1>Tables</h1>
+    <!-- All of the data are fake, the birthdays was generated with:
+      http://sqa.fyicenter.com/Online_Test_Tools/Test_User_Birthday_Date_Generator.php
+      and the names was generated with: http://uinames.com -->
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Sex</th>
+          <th>Birthday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Daniel</td>
+          <td>Austin</td>
+          <td>Male</td>
+          <td>03/24/1996</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Susan</td>
+          <td>Miller</td>
+          <td>Female</td>
+          <td>07/08/1986</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Tiffany</td>
+          <td>Cook</td>
+          <td>Female</td>
+          <td>02/21/1985</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Kevin</td>
+          <td>Hawkins</td>
+          <td>Male</td>
+          <td>08/14/1991</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </html>
