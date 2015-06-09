@@ -1,3 +1,4 @@
+/*jshint node: true */
 'use strict';
 
 var config = require('./gulpconfig.js');
@@ -99,7 +100,7 @@ gulp.task('bump-commit', function() {
     var version = 'v' + getVersionNumberFromFile(packageFiles);
     var message = 'Release ' + version;
 
-    var filesToCommit = [].concat(packageFiles, config.path.dist + '/*');
+    var filesToCommit = [].concat(packageFiles, config.path.dist + '/**/*');
     return gulp.src(filesToCommit).pipe(plugins.git.commit(message));
 });
 
@@ -142,27 +143,44 @@ gulp.task('default', [ 'dist' ]);
 gulp.task('build', [ 'dist' ]);
 
 gulp.task('dist', function(cb) {
-    return runSequence('cleanup', 'compile', 'minify', cb);
+    return runSequence(
+        'cleanup',
+        [ 'compile-css', 'compile-js' ],
+        [ 'minify-css', 'minify-js' ],
+        cb
+    );
 });
 
 gulp.task('cleanup', function(cb) {
     return del(config.path.dist, cb);
 });
 
-gulp.task('compile', function() {
-    return gulp.src(config.path.src + '/base.less').
+gulp.task('compile-css', function() {
+    return gulp.src(config.path.src + '/less/base.less').
         pipe(plugins.less()).
         pipe(plugins.autoprefixer({
             browsers: config.plugins.supportedBrowsers
         })).
-        pipe(gulp.dest(config.path.dist));
+        pipe(gulp.dest(config.path.dist + '/css'));
 });
 
-gulp.task('minify', function() {
-    return gulp.src(config.path.dist + '/base.css').
+gulp.task('compile-js', function() {
+    return gulp.src(config.path.src + '/js/*.js').
+        pipe(gulp.dest(config.path.dist + '/js'));
+});
+
+gulp.task('minify-css', function() {
+    return gulp.src(config.path.dist + '/css/base.css').
+        pipe(plugins.concat('base.min.css')).
         pipe(plugins.minifyCss()).
-        pipe(plugins.rename({ extname: '.min.css' })).
-        pipe(gulp.dest(config.path.dist));
+        pipe(gulp.dest(config.path.dist + '/css'));
+});
+
+gulp.task('minify-js', function() {
+    return gulp.src(config.path.dist + '/js/*.js').
+        pipe(plugins.concat('base.min.js')).
+        pipe(plugins.uglify()).
+        pipe(gulp.dest(config.path.dist + '/js'));
 });
 
 

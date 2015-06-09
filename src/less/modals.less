@@ -1,0 +1,39 @@
+.modal {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 1000;
+  background-color: fadeout(@light, 70%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-content {
+  background-color: @light;
+  margin: 1em 2em;
+  padding: 1em;
+  border: 1px solid @dark;
+  z-index: 1050;
+
+  @media (min-width: @sm-min) {
+    width: @modal-sm;
+  }
+  @media (min-width: @md-min) {
+    margin: 2em;
+    width: @modal-md;
+  }
+  @media (min-width: @lg-min) {
+    margin: 3em;
+    width: @modal-lg;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}

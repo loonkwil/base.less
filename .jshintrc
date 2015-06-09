@@ -25,5 +25,5 @@
 
   "maxerr": 20,
 
-  "node": true
+  "browser": true
 }

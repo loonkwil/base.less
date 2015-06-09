@@ -1,3 +1,4 @@
+/*jshint node: true */
 'use strict';
 
 var config = {};
@@ -11,7 +12,7 @@ config.path = {
 
 // Files for linting and stuff like that
 config.filesForAnalyze = {
-    js: [ 'gulpconfig.js', 'gulpfile.js' ],
+    js: [ 'gulpconfig.js', 'gulpfile.js', config.path.src + '/js/*.js' ],
     json: [ '*.json', '.*rc' ]
 };
 
