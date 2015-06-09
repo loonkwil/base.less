@@ -7,12 +7,17 @@ var config = {};
 // Don't use leading or trailing slashes!
 config.path = {
     src: 'src',
-    dist: 'dist'
+    dist: 'dist',
+    test: 'test'
 };
 
 // Files for linting and stuff like that
 config.filesForAnalyze = {
-    js: [ 'gulpconfig.js', 'gulpfile.js', config.path.src + '/js/*.js' ],
+    js: [
+        'gulpconfig.js', 'gulpfile.js',
+        config.path.test + '/*.js',
+        config.path.src + '/js/*.js'
+    ],
     json: [ '*.json', '.*rc' ]
 };
 

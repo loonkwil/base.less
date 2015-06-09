@@ -58,7 +58,9 @@
      * @param {function(MouseEvent)} fn
      * @param {HTMLElement=} $node
      */
-    base.onClick = base.on.bind(null, 'click');
+    base.onClick = function(fn, $node) {
+        base.on('click', fn, $node);
+    };
 
     /**
      * Execute a function when the DOM is ready
@@ -82,7 +84,7 @@
      */
     base.trigger = (function() {
         var createEvent;
-        if (CustomEvent) {
+        if (window.CustomEvent) {
             createEvent = function createEvent(name, data) {
                 return new CustomEvent(name, {
                     detail: data,

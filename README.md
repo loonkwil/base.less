@@ -35,7 +35,9 @@ List all gulp task: `gulp --tasks`
 
 ### Test
 
-Run the linting (jshint, jsonlint) tasks: `gulp lint` or `npm test`
+Run the qunit tests: `gulp qunit`  
+Run the linting (jshint, jsonlint) scripts: `gulp lint`  
+Run all together: `gulp test` or `npm test`
 
 ### Compile
 

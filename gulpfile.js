@@ -114,9 +114,14 @@ gulp.task('bump-tag', function(cb) {
 });
 
 
-// Task for linting
-// Usage: `gulp test` or `gulp lint`
-gulp.task('test', [ 'lint' ]);
+// Task for testing and linting
+// Usage: `gulp test` or if you want to run the testing and the linting tasks
+// separately use: `gulp qunit` and `gulp lint`
+gulp.task('test', [ 'qunit', 'lint' ]);
+
+gulp.task('qunit', function() {
+    return gulp.src(config.path.test + '/index.html').pipe(plugins.qunit());
+});
 
 gulp.task('lint', [ 'jscs', 'jshint', 'jsonlint' ]);
 
