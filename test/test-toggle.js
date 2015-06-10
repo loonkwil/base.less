@@ -1,4 +1,4 @@
-/*globals QUnit, base, $ */
+/*globals QUnit, base */
 (function() {
     'use strict';
 
@@ -8,7 +8,7 @@
 
     QUnit.module('Base.toggle', {
         beforeEach: function() {
-            $fixture = $('#qunit-fixture').get(0);
+            $fixture = document.getElementById('qunit-fixture');
         }
     });
 
@@ -17,17 +17,16 @@
         var done = assert.async();
 
         var firedEvents = {};
-
-        $($fixture).on(
-            'base:toggle base:toggle:show base:toggle:hide',
-            function(e) {
-                if (e.type in firedEvents) {
-                    firedEvents[e.type] += 1;
+        var events = [ 'base:toggle', 'base:toggle:show', 'base:toggle:hide' ];
+        events.forEach(function(oneEvent) {
+            base.on(oneEvent, function() {
+                if (oneEvent in firedEvents) {
+                    firedEvents[oneEvent] += 1;
                 } else {
-                    firedEvents[e.type] = 1;
+                    firedEvents[oneEvent] = 1;
                 }
-            }
-        );
+            }, $fixture);
+        });
 
         base.toggle($fixture);
         base.toggle($fixture);

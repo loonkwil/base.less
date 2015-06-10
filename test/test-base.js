@@ -1,14 +1,28 @@
-/*globals QUnit, base, $ */
+/*globals QUnit, base */
 (function() {
     'use strict';
 
-    /** @type {HTMLElement} */
+    /**
+     * @param {HTMLElement} $node
+     */
+    var click = function($node) {
+        if (document.createEvent) {
+            var evt = document.createEvent('MouseEvents');
+            evt.initEvent('click', true, false);
+            $node.dispatchEvent(evt);
+        } else if (document.createEventObject) {
+            $node.fireEvent('onclick');
+        } else if (typeof $node.onclick === 'function') {
+            $node.onclick();
+        }
+    };
+
     var $fixture;
 
 
     QUnit.module('Base', {
         beforeEach: function() {
-            $fixture = $('#qunit-fixture').get(0);
+            $fixture = document.getElementById('qunit-fixture');
         }
     });
 
@@ -45,7 +59,7 @@
             return done();
         }, $fixture);
 
-        $($fixture).click();
+        click($fixture);
     });
 
     QUnit.test('base.off', function(assert) {
@@ -59,7 +73,7 @@
 
         base.on('click', eventHandler, $fixture);
         base.off('click', eventHandler, $fixture);
-        $($fixture).click();
+        click($fixture);
 
         setTimeout(function() {
             assert.ok(!eventFired);
@@ -76,7 +90,7 @@
             return done();
         }, $fixture);
 
-        $($fixture).click();
+        click($fixture);
     });
 
     QUnit.test('base.onReady', function(assert) {
@@ -93,7 +107,7 @@
         assert.expect(1);
         var done = assert.async();
 
-        $($fixture).on('test', function() {
+        $fixture.addEventListener('test', function() {
             assert.ok(true);
             return done();
         });
