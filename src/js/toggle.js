@@ -38,7 +38,8 @@
 
             base.toggle(target);
 
-            return e.stopPropagation();
+            e.stopPropagation();
+            return e.preventDefault();
         });
     });
 }());
