@@ -1,5 +1,7 @@
 # base.less
 
+[![Build Status](https://travis-ci.org/loonkwil/base.less.png)](https://travis-ci.org/loonkwil/base.less)
+
 Simple front-end framework for developing responsive, mobile first web pages.
 
 Inspired by
