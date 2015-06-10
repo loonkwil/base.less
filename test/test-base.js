@@ -32,7 +32,7 @@
 
         $el = base.$all('#modal .modal-content', $fixture);
         assert.ok($el instanceof NodeList);
-        assert.equal($el[0].innerText, 'modal');
+        assert.equal($el[0].innerHTML, 'modal');
 
         assert.equal(base.$all('not-found').length, 0);
         assert.equal(base.$all('body', document)[0], document.body);
