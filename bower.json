@@ -9,6 +9,7 @@
   "ignore": [
     "bower_components",
     "src",
+    "test",
     "node_modules",
     "**/.*",
     "gulpconfig.js",
