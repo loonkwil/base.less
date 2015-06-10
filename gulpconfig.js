@@ -31,7 +31,7 @@ config.plugins = {
     // Add vendor prefixed styles for these browsers
     // Possible values: https://github.com/ai/autoprefixer#browsers
     autoprefixer: {
-        supportedBrowsers: [ 'last 3 version' ]
+        supportedBrowsers: [ 'last 2 versions', 'IE >= 9' ]
     }
 };
 

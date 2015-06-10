@@ -15,6 +15,14 @@ Inspired by
 bower install git@github.com:loonkwil/base.less.git --save
 ```
 
+## Browser support
+
+ * Chrome last 2 version
+ * Firefox last 2 version
+ * Opera last 2 version
+ * Safari last 2 version
+ * IE 9+
+
 ## Usage
 
 ```html
