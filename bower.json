@@ -19,6 +19,7 @@
     "normalize-css": "^3.0.0"
   },
   "devDependencies": {
-    "qunit": "^1.18.0"
+    "qunit": "^1.18.0",
+    "jquery": "^2.1.0"
   }
 }
