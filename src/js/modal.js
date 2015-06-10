@@ -28,7 +28,7 @@
     base.onReady(function whenDOMIsReady() {
         var $body = base.$('body');
 
-        base.on('base.toggle.show', function(e) {
+        base.on('base:toggle:show', function(e) {
             $body.classList.add('modal-open');
 
             var modal = e.target;
@@ -37,7 +37,7 @@
             return e.stopPropagation();
         });
 
-        base.on('base.toggle.hide', function(e) {
+        base.on('base:toggle:hide', function(e) {
             $body.classList.remove('modal-open');
 
             var modal = e.target;

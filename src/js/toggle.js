@@ -18,11 +18,11 @@
 
         var afterToggle = !base.toggleAttr($el, 'hidden', visible);
 
-        base.trigger('base.toggle', $el, { visible: afterToggle });
+        base.trigger('base:toggle', $el, { visible: afterToggle });
         if (afterToggle) {
-            base.trigger('base.toggle.show', $el);
+            base.trigger('base:toggle:show', $el);
         } else {
-            base.trigger('base.toggle.hide', $el);
+            base.trigger('base:toggle:hide', $el);
         }
     };
 
