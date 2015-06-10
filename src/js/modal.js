@@ -28,20 +28,18 @@
     base.onReady(function whenDOMIsReady() {
         var $body = base.$('body');
 
-        base.on('base:toggle:show', function(e) {
-            $body.classList.add('modal-open');
+        base.on('base:toggle', function toggleEventHandler(e) {
+            var $el = e.target;
+            if (!$el.classList.contains('modal')) { return; }
 
-            var modal = e.target;
-            base.onClick(modalClickEventHandler, modal);
-
-            return e.stopPropagation();
-        });
-
-        base.on('base:toggle:hide', function(e) {
-            $body.classList.remove('modal-open');
-
-            var modal = e.target;
-            base.off('click', modalClickEventHandler, modal);
+            var isVisible = e.detail.visible;
+            if (isVisible) {
+                $body.classList.add('modal-open');
+                base.onClick(modalClickEventHandler, $el);
+            } else {
+                $body.classList.remove('modal-open');
+                base.off('click', modalClickEventHandler, $el);
+            }
 
             return e.stopPropagation();
         });
