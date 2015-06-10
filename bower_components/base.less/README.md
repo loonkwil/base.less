@@ -1,5 +1,7 @@
 # base.less
 
+[![Build Status](https://travis-ci.org/loonkwil/base.less.png)](https://travis-ci.org/loonkwil/base.less)
+
 Simple front-end framework for developing responsive, mobile first web pages.
 
 Inspired by
@@ -13,6 +15,14 @@ Inspired by
 bower install git@github.com:loonkwil/base.less.git --save
 ```
 
+## Browser support
+
+ * Chrome last 2 version
+ * Firefox last 2 version
+ * Opera last 2 version
+ * Safari last 2 version
+ * IE 9+
+
 ## Usage
 
 ```html
@@ -21,9 +31,11 @@ bower install git@github.com:loonkwil/base.less.git --save
   <meta charset=utf-8>
   <title></title>
   <link rel=stylesheet href=bower_components/normalize-css/normalize.css>
-  <link rel=stylesheet href=bower_components/base.less/dist/base.css>
+  <link rel=stylesheet href=bower_components/base.less/dist/css/base.css>
 
   <h1>Hello</h1>
+
+  <script src="bower_components/base.less/dist/js/base.min.js" defer></script>
 </html>
 ```
 
@@ -33,12 +45,13 @@ List all gulp task: `gulp --tasks`
 
 ### Test
 
-Run the linting (jshint, jsonlint) tasks: `gulp lint` or `npm test`
+Run the qunit tests: `gulp qunit`  
+Run the linting (jshint, jsonlint) scripts: `gulp lint`  
+Run all together: `gulp test` or `npm test`
 
 ### Compile
 
-The `gulp build` (or just `gulp`) task will create a `base.css` and a
-`base.min.css` file in the `dist` folder.
+The `gulp build` (or just `gulp`).
 
 ### Release
 

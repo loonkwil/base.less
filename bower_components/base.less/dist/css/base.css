@@ -666,6 +666,59 @@ th:last-child,
 td:last-child {
   padding-right: 0;
 }
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.modal[hidden] {
+  display: none;
+}
+.modal-content {
+  background-color: #ffffff;
+  margin: 1em 2em;
+  padding: 1em;
+  border: 1px solid #4a4a4a;
+  z-index: 1050;
+}
+@media (min-width: 768px) {
+  .modal-content {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .modal-content {
+    margin: 2em;
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-content {
+    margin: 3em;
+    width: 75%;
+  }
+}
+.modal-open {
+  overflow: hidden;
+}
 .u-full-width {
   width: 100%;
 }

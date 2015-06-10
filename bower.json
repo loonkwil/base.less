@@ -5,6 +5,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "base.less": "git@github.com:loonkwil/base.less.git"
+    "base.less": "git@github.com:loonkwil/base.less.git#^0.3.0"
   }
 }
