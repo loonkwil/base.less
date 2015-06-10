@@ -6,9 +6,9 @@
 
   <div id="qunit"></div>
   <div id="qunit-fixture">
-    <a href="/" data-toggle=".container"></a>
-    <div class="container">
-      <span>test</span>
+    <a href="/" data-toggle="#modal">Launch modal</a>
+    <div id="modal" hidden>
+      <div class="modal-content">modal</div>
     </div>
   </div>
 
@@ -16,7 +16,9 @@
 
   <script src=../src/js/base.js defer></script>
   <script src=../src/js/toggle.js defer></script>
+  <script src=../src/js/modal.js defer></script>
 
   <script src=test-base.js defer></script>
   <script src=test-toggle.js defer></script>
+  <script src=test-modal.js defer></script>
 </html>

@@ -18,6 +18,7 @@
 
         var firedEvents = {};
         var events = [ 'base:toggle', 'base:toggle:show', 'base:toggle:hide' ];
+
         events.forEach(function(oneEvent) {
             base.on(oneEvent, function() {
                 if (oneEvent in firedEvents) {
@@ -47,13 +48,13 @@
         assert.expect(3);
 
         var $a = base.$('a', $fixture);
-        var containerSelector = $a.getAttribute('data-toggle');
-        var $container = base.$(containerSelector);
+        var targetSelector = $a.getAttribute('data-toggle');
+        var $target = base.$(targetSelector);
 
-        assert.ok(!$container.hasAttribute('hidden'));
+        assert.ok($target.hasAttribute('hidden'));
         base.trigger('click', $a);
-        assert.ok($container.hasAttribute('hidden'));
+        assert.ok(!$target.hasAttribute('hidden'));
         base.trigger('click', $a);
-        assert.ok(!$container.hasAttribute('hidden'));
+        assert.ok($target.hasAttribute('hidden'));
     });
 }());

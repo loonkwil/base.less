@@ -30,9 +30,9 @@
         assert.expect(4);
         var $el;
 
-        $el = base.$all('.container>span', $fixture);
+        $el = base.$all('#modal .modal-content', $fixture);
         assert.ok($el instanceof NodeList);
-        assert.equal($el[0].innerText, 'test');
+        assert.equal($el[0].innerText, 'modal');
 
         assert.equal(base.$all('not-found').length, 0);
         assert.equal(base.$all('body', document)[0], document.body);
@@ -45,8 +45,8 @@
         assert.equal(base.$('body'), document.body);
         assert.equal(base.$('not-found'), null);
         assert.equal(
-            base.$all('.container', $fixture)[0],
-            base.$('.container', $fixture)
+            base.$all('#modal', $fixture)[0],
+            base.$('#modal', $fixture)
         );
     });
 
