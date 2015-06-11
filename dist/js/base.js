@@ -84,7 +84,7 @@
      */
     base.trigger = (function() {
         var createEvent;
-        if (window.CustomEvent) {
+        if (typeof CustomEvent === 'function') {
             createEvent = function createEvent(name, data) {
                 return new CustomEvent(name, {
                     detail: data,
