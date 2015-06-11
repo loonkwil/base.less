@@ -2,7 +2,7 @@
 (function() {
     'use strict';
 
-    var base = window.base = window.base || {};
+    var base = window.base = {};
 
 
     /**
