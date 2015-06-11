@@ -129,10 +129,10 @@ ul {
   padding-left: 0;
   margin-top: 0;
 }
+ol ul,
 ul ul,
-ul ol,
 ol ol,
-ol ul {
+ul ol {
   margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%;
 }
@@ -579,6 +579,10 @@ legend {
   display: block;
   margin-bottom: .5rem;
 }
+.label-body {
+  display: inline-block;
+  margin-left: .5rem;
+}
 fieldset {
   padding: 0;
   border-width: 0;
@@ -586,10 +590,6 @@ fieldset {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-}
-label > .label-body {
-  display: inline-block;
-  margin-left: .5rem;
 }
 .controls {
   margin-top: 4em;
@@ -734,7 +734,7 @@ td:last-child {
 .u-nowrap {
   white-space: nowrap;
 }
-.button,
+.btn,
 button,
 textarea,
 input,
