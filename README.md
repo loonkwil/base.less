@@ -21,7 +21,7 @@ bower install git@github.com:loonkwil/base.less.git --save
  * Firefox last 2 version
  * Opera last 2 version
  * Safari last 2 version
- * IE 9+
+ * IE 10+
 
 ## Usage
 
