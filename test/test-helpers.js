@@ -20,7 +20,7 @@
     var $fixture;
 
 
-    QUnit.module('Base', {
+    QUnit.module('Base.helpers', {
         beforeEach: function() {
             $fixture = document.getElementById('qunit-fixture');
         }
