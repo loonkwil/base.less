@@ -1,8 +1,6 @@
+/*globals base */
 (function() {
     'use strict';
-
-    var base = window.base = window.base || {};
-
 
     /**
      * Show or hide an element (with the `hidden` attribute)
