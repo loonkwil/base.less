@@ -26,21 +26,17 @@ input[type="button"] {
     background-color: @dark;
     outline: 0;
   }
-}
 
-.btn.btn--primary,
-button.btn--primary,
-input[type="submit"].btn--primary,
-input[type="reset"].btn--primary,
-input[type="button"].btn--primary {
-  color: @highlight;
-  background-color: @light;
-  border-color: @highlight;
-
-  &:hover,
-  &:focus {
-    color: @light;
-    background-color: @highlight;
+  &.btn--primary {
+    color: @highlight;
+    background-color: @light;
     border-color: @highlight;
+
+    &:hover,
+    &:focus {
+      color: @light;
+      background-color: @highlight;
+      border-color: @highlight;
+    }
   }
 }
