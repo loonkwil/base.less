@@ -1,6 +1,6 @@
 {
   "name": "base.less",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "authors": [
     "Peter Simon <simonpepe@gmail.com>"
   ],
@@ -9,6 +9,7 @@
   "ignore": [
     "bower_components",
     "src",
+    "test",
     "node_modules",
     "**/.*",
     "gulpconfig.js",
@@ -22,11 +23,11 @@
     "qunit": "^1.18.0"
   },
   "homepage": "https://github.com/loonkwil/base.less",
-  "_release": "0.3.0",
+  "_release": "0.3.1",
   "_resolution": {
     "type": "version",
-    "tag": "v0.3.0",
-    "commit": "75fe3d29d08c20318d39d3be259e926896644df6"
+    "tag": "v0.3.1",
+    "commit": "0a75fbbccd50744686b10daba23ba4e1120173d4"
   },
   "_source": "git@github.com:loonkwil/base.less.git",
   "_target": "^0.3.0",
