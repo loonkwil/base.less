@@ -734,15 +734,3 @@ td:last-child {
 .u-nowrap {
   white-space: nowrap;
 }
-.btn,
-button,
-textarea,
-input,
-select {
-  -webkit-transition: color, border-color, background-color 0.2s linear;
-          transition: color, border-color, background-color 0.2s linear;
-}
-a {
-  -webkit-transition: color .2s linear;
-          transition: color .2s linear;
-}
