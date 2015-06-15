@@ -8,7 +8,6 @@
   "description": "Simple front-end framework for developing responsive, mobile first web pages",
   "ignore": [
     "bower_components",
-    "src",
     "test",
     "node_modules",
     "**/.*",

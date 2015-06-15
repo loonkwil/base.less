@@ -170,7 +170,13 @@ gulp.task('compile-css', function() {
 });
 
 gulp.task('compile-js', function() {
-    return gulp.src(config.path.src + '/js/*.js').
+    var files = [ 'helpers.js', 'toggle.js', 'modal.js' ].
+        map(function(oneFile) {
+            return config.path.src + '/js/' + oneFile;
+        });
+
+    return gulp.src(files).
+        pipe(plugins.concat('base.js')).
         pipe(gulp.dest(config.path.dist + '/js'));
 });
 
@@ -182,7 +188,7 @@ gulp.task('minify-css', function() {
 });
 
 gulp.task('minify-js', function() {
-    return gulp.src(config.path.dist + '/js/*.js').
+    return gulp.src(config.path.dist + '/js/base.js').
         pipe(plugins.concat('base.min.js')).
         pipe(plugins.uglify()).
         pipe(gulp.dest(config.path.dist + '/js'));
