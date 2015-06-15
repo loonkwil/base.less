@@ -1,0 +1,79 @@
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+// With gutters
+.row--gutters .col {
+  margin-right: @grid-gutter-size;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// Individual sizing
+.make-individual-sizing();
+
+@media (min-width: @sm-min) {
+  .make-individual-sizing(sm-);
+}
+
+@media (min-width: @md-min) {
+  .make-individual-sizing(md-);
+}
+
+@media (min-width: @lg-min) {
+  .make-individual-sizing(lg-);
+}
+
+
+// Helpers
+.make-individual-sizing(@prefix: ~'') {
+  .@{prefix}row--fit > .col {
+    flex: 1;
+  }
+  .@{prefix}row--full > .col {
+    flex: 0 0 percentage(1);
+  }
+  .@{prefix}row--1of2 > .col {
+    flex: 0 0 percentage(1/2);
+  }
+  .@{prefix}row--1of3 > .col {
+    flex: 0 0 percentage(1/3);
+  }
+  .@{prefix}row--1of4 > .col {
+    flex: 0 0 percentage(1/4);
+  }
+
+  .@{prefix}col--fit {
+    flex: 1 !important;
+  }
+  .@{prefix}col--full {
+    width: percentage(1) !important;
+    flex: none !important;
+  }
+  .@{prefix}col--1of2 {
+    width: percentage(1/2) !important;
+    flex: none !important;
+  }
+  .@{prefix}col--1of3 {
+    width: percentage(1/3) !important;
+    flex: none !important;
+  }
+  .@{prefix}col--2of3 {
+    width: percentage(2/3) !important;
+    flex: none !important;
+  }
+  .@{prefix}col--1of4 {
+    width: percentage(1/4) !important;
+    flex: none !important;
+  }
+  .@{prefix}col--3of4 {
+    width: percentage(3/4) !important;
+    flex: none !important;
+  }
+}
