@@ -147,6 +147,7 @@ code {
   background: #f3f3f3;
   border: 1px solid #b3b3b3;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  overflow-y: auto;
 }
 pre > code {
   display: block;
@@ -190,6 +191,9 @@ form {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .col {
   -webkit-box-flex: 1;
