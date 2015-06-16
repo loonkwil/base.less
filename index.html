@@ -9,6 +9,7 @@
 
   <link rel=stylesheet href=bower_components/base.less/dist/css/base.min.css>
   <link rel=stylesheet href=css/site.css>
+  <link rel=stylesheet href=css/prism.css>
 
   <div class="container">
     <h1>Installation</h1>
@@ -42,6 +43,7 @@
       <div class="col">.col</div>
       <div class="col">.col</div>
     </div>
+
     <div class="row show-grid">
       <div class="col">.col</div>
       <div class="col">
@@ -65,6 +67,13 @@
       </div>
     </div>
 
+    <pre><code class="language-markup">&lt;div class="row"&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
     <p>Grid with gutters (gaps between column content).</p>
     <div class="row row--gutters show-grid">
       <div class="col">.col</div>
@@ -76,6 +85,11 @@
       </div>
       <div class="col">.col</div>
     </div>
+
+    <pre><code class="language-markup">&lt;div class="row row--gutters"&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
     <h2>Individual Sizing</h2>
     <p>When equal widths aren’t what you want, you can add sizing classes to
@@ -96,6 +110,12 @@
       <div class="col col--1of3">.col .col--1of3</div>
     </div>
 
+    <pre><code class="language-markup">&lt;div class="row"&gt;
+  &lt;div class="col col--1of4"&gt;.&lt;/div&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+  &lt;div class="col col--1of3"&gt;.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
     <h2>Responsive Grids</h2>
     <p>Resize your browser to see them in action.</p>
     <div class="row row--full sm-row--fit show-grid">
@@ -108,6 +128,17 @@
       <div class="col sm-col--2of3 md-col--fit">.col .sm-col--2of3 .md-col--fit</div>
       <div class="col sm-col--1of3 md-col--fit">.col .sm-col--1of3 .md-col--fit</div>
     </div>
+
+    <pre><code class="language-markup">&lt;div class="row row--full sm-row--fit"&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+  &lt;div class="col"&gt;.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row row--full"&gt;
+  &lt;div class="col sm-col--1of3 md-col--fit"&gt;.&lt;/div&gt;
+  &lt;div class="col sm-col--2of3 md-col--fit"&gt;.&lt;/div&gt;
+  &lt;div class="col sm-col--2of3 md-col--fit"&gt;.&lt;/div&gt;
+  &lt;div class="col sm-col--1of3 md-col--fit"&gt;.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
     <h1>Typography</h1>
     <div class="row row--full row--gutters sm-row--fit">
@@ -146,6 +177,9 @@
       <input class="btn--primary" type="submit" value="submit input">
       <input class="btn--primary" type="button" value="button input">
     </div>
+
+    <pre><code class="language-markup">&lt;a class="btn" href="#"&gt;Anchor button&lt;/a&gt;
+&lt;a class="btn btn--primary" href="#"&gt;Anchor button&lt;/a&gt;</code></pre>
 
     <h1>Forms</h1>
     <form>
@@ -202,6 +236,40 @@
         <input class="btn--primary" type="submit" value="Submit">
       </div>
     </form>
+    <pre><code class="language-markup">&lt;form&gt;
+  &lt;div class="row row--gutters row--full sm-row--fit"&gt;
+    &lt;div class="col"&gt;
+      &lt;label for="first-name-input"&gt;First name&lt;/label&gt;
+      &lt;input type="text" id="first-name-input" class="u-full-width"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col"&gt;
+      &lt;label for="last-name-input"&gt;Last name&lt;/label&gt;
+      &lt;input type="text" id="last-name-input" class="u-full-width"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- ... --&gt;
+
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;
+      &lt;label&gt;
+        &lt;input type="radio" name="sex" value=""&gt;
+        &lt;span class="label-body"&gt;Female&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;label&gt;
+        &lt;input type="radio" name="sex" value=""&gt;
+        &lt;span class="label-body"&gt;Male&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="controls"&gt;
+    &lt;input class="btn--primary" type="submit" value="Submit"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
 
     <h1>Lists</h1>
     <div class="row row--full sm-row--fit">
@@ -314,6 +382,21 @@
         </div>
       </div>
     </div>
+
+    <pre><code class="language-markup">&lt;button type="button" data-toggle="#myModal"&gt;
+  Launch modal
+&lt;/button&gt;
+
+&lt;div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" hidden&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;h2 id="myModalLabel"&gt;Modal title&lt;/h2&gt;
+    Modal content
+
+    &lt;div class="controls"&gt;
+      &lt;button type="button" data-toggle="#myModal"&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
 
   <script src=bower_components/prism/prism.js defer></script>
