@@ -12,7 +12,7 @@ Inspired by
 ## Install
 
 ```bash
-bower install git@github.com:loonkwil/base.less.git --save
+bower install git://github.com/loonkwil/base.less.git --save
 ```
 
 ## Browser support
@@ -31,11 +31,11 @@ bower install git@github.com:loonkwil/base.less.git --save
   <meta charset=utf-8>
   <title></title>
   <link rel=stylesheet href=bower_components/normalize-css/normalize.css>
-  <link rel=stylesheet href=bower_components/base.less/dist/css/base.css>
+  <link rel=stylesheet href=bower_components/base.less/dist/css/base.min.css>
 
   <h1>Hello</h1>
 
-  <script src="bower_components/base.less/dist/js/base.min.js" defer></script>
+  <script src=bower_components/base.less/dist/js/base.min.js defer></script>
 </html>
 ```
 
