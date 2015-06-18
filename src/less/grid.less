@@ -16,6 +16,27 @@
   }
 }
 
+// Alignments
+.row--top {
+  align-items: flex-start;
+}
+.row--center {
+  align-items: center;
+}
+.row--bottom {
+  align-items: flex-end;
+}
+
+.col--top {
+  align-self: flex-start;
+}
+.col--center {
+  align-self: center;
+}
+.col--bottom {
+  align-self: flex-end;
+}
+
 // Individual sizing
 .make-individual-sizing();
 
@@ -30,7 +51,6 @@
 @media (min-width: @lg-min) {
   .make-individual-sizing(lg-);
 }
-
 
 // Helpers
 .make-individual-sizing(@prefix: ~'') {
