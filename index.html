@@ -429,7 +429,29 @@
       </tbody>
     </table>
 
-    <h1 id="modals"><a href="#modals">Modals</a></h1>
+    <h1 id="components"><a href="#components">Components</a></h1>
+    <h2 id="toggle"><a href="#toggle">Toggle</a></h2>
+    <p>Toggle any elements visibility:</p>
+    <div class="row">
+      <div class="col">
+        <button type="button" data-toggle="#target">
+          Toggle
+        </button>
+      </div>
+      <div class="col">
+        <p id="target">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam
+          lectus. Sed sit amet ipsum mauris.
+        </p>
+      </div>
+    </div>
+    <pre><code class="language-markup">&lt;button type="button" data-toggle="#target"&gt;
+  Toggle
+&lt;/button&gt;
+&lt;p id="target"&gt;.&lt;/p&gt;</code></pre>
+    <p>Add <code>hidden</code> attribute if you want to set the initial state to hidden.</p>
+
+    <h2 id="modal"><a href="#modal">Modal</a></h2>
     <button type="button" data-toggle="#myModal">
       Launch modal
     </button>
