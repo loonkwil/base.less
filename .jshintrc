@@ -25,5 +25,6 @@
 
   "maxerr": 20,
 
-  "browser": true
+  "browser": true,
+  "esnext": true
 }
