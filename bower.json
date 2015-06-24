@@ -12,7 +12,7 @@
     "node_modules",
     "**/.*",
     "gulpconfig.js",
-    "gulpfile.js",
+    "gulpfile.babel.js",
     "package.json"
   ],
   "dependencies": {
