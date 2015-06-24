@@ -201,11 +201,13 @@ form {
       -ms-flex: 1;
           flex: 1;
 }
-.row--gutters .col {
-  margin-right: 1em;
+.row--gutters {
+  margin-right: -0.5em;
+  margin-left: -0.5em;
 }
-.row--gutters .col:last-child {
-  margin-right: 0;
+.row--gutters .col {
+  margin-right: 0.5em;
+  margin-left: 0.5em;
 }
 .row--top {
   -webkit-box-align: start;
@@ -710,25 +712,14 @@ td:last-child {
   background-color: rgba(255, 255, 255, 0.3);
   overflow-y: auto;
   overflow-x: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  padding: 0 2em;
 }
 .modal[hidden] {
   display: none;
 }
 .modal-content {
   background-color: #ffffff;
-  margin: 1em 2em;
+  margin: 1em auto;
   padding: 1em;
   border: 1px solid #4a4a4a;
   z-index: 1050;
@@ -740,13 +731,13 @@ td:last-child {
 }
 @media (min-width: 992px) {
   .modal-content {
-    margin: 2em;
+    margin: 2em auto;
     width: 75%;
   }
 }
 @media (min-width: 1200px) {
   .modal-content {
-    margin: 3em;
+    margin: 3em auto;
     width: 75%;
   }
 }
