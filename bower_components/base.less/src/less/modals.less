@@ -5,9 +5,7 @@
   background-color: fadeout(@light, 70%);
   overflow-y: auto;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  padding: 0 2em;
 
   &[hidden] {
     display: none;
@@ -16,7 +14,7 @@
 
 .modal-content {
   background-color: @light;
-  margin: 1em 2em;
+  margin: 1em auto;
   padding: 1em;
   border: 1px solid @dark;
   z-index: 1050;
@@ -25,11 +23,11 @@
     width: @modal-sm;
   }
   @media (min-width: @md-min) {
-    margin: 2em;
+    margin: 2em auto;
     width: @modal-md;
   }
   @media (min-width: @lg-min) {
-    margin: 3em;
+    margin: 3em auto;
     width: @modal-lg;
   }
 }
