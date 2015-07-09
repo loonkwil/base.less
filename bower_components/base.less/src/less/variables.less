@@ -3,6 +3,10 @@
 @md-min: 992px; // Medium devices (desktops)
 @lg-min: 1200px; // Large devices (large desktops)
 
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
 // Colors
 @dark: #4a4a4a;
 @grey: #b3b3b3;
@@ -27,11 +31,13 @@
 @line-height-base: 1.6;
 
 // Container sizes
+@container-xs: 100%;
 @container-sm: 85%;
 @container-md: 82%;
 @container-lg: 80%;
 
 // Modal sizes
+@modal-xs: 100%;
 @modal-sm: 80%;
 @modal-md: 75%;
 @modal-lg: 75%;

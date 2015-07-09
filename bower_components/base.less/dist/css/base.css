@@ -110,11 +110,6 @@ h6 {
   line-height: 1.6;
   letter-spacing: .4rem;
 }
-@media (min-width: 768px) {
-  h6 {
-    font-size: 1.5rem;
-  }
-}
 p {
   margin-top: 0;
 }
@@ -170,6 +165,7 @@ form {
   margin-left: auto;
   padding-right: 1em;
   padding-left: 1em;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .container {
@@ -712,17 +708,18 @@ td:last-child {
   background-color: rgba(255, 255, 255, 0.3);
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0 2em;
+  padding: 0 1.5em;
 }
 .modal[hidden] {
   display: none;
 }
 .modal-content {
   background-color: #ffffff;
-  margin: 1em auto;
   padding: 1em;
   border: 1px solid #4a4a4a;
   z-index: 1050;
+  width: 100%;
+  margin: 1em auto;
 }
 @media (min-width: 768px) {
   .modal-content {
@@ -758,4 +755,24 @@ td:last-child {
 }
 .u-nowrap {
   white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .u-hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .u-hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .u-hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .u-hidden-lg {
+    display: none !important;
+  }
 }

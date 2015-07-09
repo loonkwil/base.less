@@ -5,7 +5,7 @@
   background-color: fadeout(@light, 70%);
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0 2em;
+  padding: 0 1.5em;
 
   &[hidden] {
     display: none;
@@ -14,11 +14,12 @@
 
 .modal-content {
   background-color: @light;
-  margin: 1em auto;
   padding: 1em;
   border: 1px solid @dark;
   z-index: 1050;
 
+  width: @modal-xs;
+  margin: 1em auto;
   @media (min-width: @sm-min) {
     width: @modal-sm;
   }
