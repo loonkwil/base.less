@@ -17,3 +17,32 @@
 .u-nowrap {
   white-space: nowrap;
 }
+
+.u-hidden-xs {
+  @media (max-width: @xs-max) {
+    .hide();
+  }
+}
+
+.u-hidden-sm {
+  @media (min-width: @sm-min) and (max-width: @sm-max) {
+    .hide();
+  }
+}
+
+.u-hidden-md {
+  @media (min-width: @md-min) and (max-width: @md-max) {
+    .hide();
+  }
+}
+
+.u-hidden-lg {
+  @media (min-width: @lg-min) {
+    .hide();
+  }
+}
+
+// Helpers
+.hide() {
+  display: none !important;
+}
